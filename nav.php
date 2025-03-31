@@ -13,7 +13,7 @@
         <a href="shop.php">Shop</a>
         <a href="order.php">Orders</a>
         <a href="cart.php">Cart</a>
-        <a href="#">About</a>
+        <a href="about.php">About</a>
         <?php if (isset($_SESSION['user_id'])): ?>
             <a href="logout.php">Logout (<?= $_SESSION['name']; ?>)</a>
         <?php else: ?>

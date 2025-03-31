@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f4f4f9;
     color: #333;
     margin: 0;
     padding: 0;
@@ -12,10 +12,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #222;
+    background: #1a1a2e;
     color: white;
     padding: 15px 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -28,10 +28,11 @@ nav a {
     text-decoration: none;
     color: white;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #d63384;
+    color: #ff4d6d;
 }
 
 /* Dashboard */
@@ -48,47 +49,296 @@ nav a:hover {
 }
 
 .card {
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 220px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
     font-size: 18px;
     margin-bottom: 10px;
+    color: #1a1a2e;
 }
 
 .card p {
     font-size: 22px;
     font-weight: bold;
-    color: #d63384;
+    color: #ff4d6d;
 }
+
 /* General Container */
 .container {
     width: 90%;
     margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 /* Add Product Button */
 .btn-add {
     display: inline-block;
-    padding: 10px 15px;
-    background: #d63384;
+    padding: 12px 18px;
+    background: #ff4d6d;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .btn-add:hover {
-    background: #8b008b;
+    background: #c0392b;
 }
 
 /* Product Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #1a1a2e;
+    color: white;
+}
+
+/* Product Image */
+.product-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.1);
+}
+
+/* Buttons */
+.btn-edit, .btn-delete {
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-edit {
+    background: #3498db;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #217dbb;
+}
+
+.btn-delete {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c0392b;
+}
+
+/* Orders Page */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-table th, .orders-table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.orders-table th {
+    background-color: #1a1a2e;
+    color: white;
+}
+
+.orders-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.orders-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status Dropdown */
+.order-status {
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* View Details Button */
+.view-details-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #217dbb;
+}
+
+/* Delete Order Button */
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    padding: 7px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+}
+
+/* Order Details */
+.order-details {
+    display: none;
+    background: #f8f8f8;
+    padding: 15px;
+    border-left: 4px solid #ff4d6d;
+    border-radius: 5px;
+}
+
+/* Order Items */
+.order-items {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.order-item {
+    width: 120px;
+    text-align: center;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.order-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+}
+/* users css */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d63384;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d63384;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* User Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -110,20 +360,22 @@ th {
     color: white;
 }
 
-/* Product Image */
-.product-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    object-fit: cover;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
 }
 
 /* Buttons */
 .btn-edit, .btn-delete {
-    padding: 6px 12px;
+    padding: 8px 12px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease;
 }
 
 .btn-edit {
@@ -142,4 +394,66 @@ th {
 
 .btn-delete:hover {
     background: #a71d2a;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+form input, form select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px;
+    background: #d63384;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #8b008b;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .btn-edit, .btn-delete {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    form {
+        width: 90%;
+    }
 }

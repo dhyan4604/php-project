@@ -26,11 +26,11 @@ include 'nav.php';
     <h2>Shop by Category</h2>
     <div class="category-grid">
         <div class="category">
-            <img src="https://cdn-om.cdnpk.net/users/868/86804582/uploads/e4640d00-f673-4b72-9c56-3daeaa1296e4/e4640d00-f673-4b72-9c56-3daeaa1296e4-thumb.jpg?token=exp=1743227481~hmac=1ff1ae6b9e80dab5c9c0ca3a3191df9b" alt="Men's Fashion">
+            <img src="https://img.freepik.com/free-photo/close-up-flannel-shirt-detail_23-2149575386.jpg?t=st=1743411256~exp=1743414856~hmac=ef8b7f611992a504634207ed06d519b4740623ec8d73e9656c50647f76006c67&w=740" alt="Top Wear">
             <h3>Top Wear</h3>
         </div>
         <div class="category">
-            <img src="https://img.freepik.com/free-photo/blue-jeans-fabric-details_150588-32.jpg?t=st=1743141600~exp=1743145200~hmac=9de65dc7c06543e17027c0f32fd96479e58956c94f9ae1b0c85d7cd3a4d6b76b&w=740" alt="Women's Fashion">
+            <img src="https://img.freepik.com/free-photo/blue-jeans-fabric-details_150588-32.jpg?t=st=1743141600~exp=1743145200~hmac=9de65dc7c06543e17027c0f32fd96479e58956c94f9ae1b0c85d7cd3a4d6b76b&w=740" alt="Bottom Wear">
             <h3>Bottom Wear</h3>
         </div>
     </div>
