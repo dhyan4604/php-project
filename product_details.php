@@ -9,7 +9,7 @@ if (!isset($_GET['id'])) {
 
 $product_id = $_GET['id'];
 
-// Fetch product details
+
 $sql = "SELECT * FROM products WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $product_id);
@@ -23,7 +23,7 @@ if ($result->num_rows == 0) {
 
 $product = $result->fetch_assoc();
 
-// Fetch product images
+
 $image_sql = "SELECT image_path FROM product_images WHERE product_id = ?";
 $image_stmt = $conn->prepare($image_sql);
 $image_stmt->bind_param("i", $product_id);
@@ -35,7 +35,7 @@ while ($row = $image_result->fetch_assoc()) {
     $images[] = $row['image_path'];
 }
 
-$main_image = $images[0] ?? 'default.jpg'; // Set first image as default, fallback to 'default.jpg'
+$main_image = $images[0] ?? 'default.jpg'; 
 ?>
 <?php include 'nav.php'; ?>
 <!DOCTYPE html>
@@ -56,11 +56,10 @@ $main_image = $images[0] ?? 'default.jpg'; // Set first image as default, fallba
 
 
 <section class="product-details">
-    <!-- Left: Image Gallery -->
+
     <div class="product-image">
         <img id="main-product-image" src="admin/<?= $main_image ?>" alt="<?= htmlspecialchars($product['name']) ?>">
-        
-        <!-- Thumbnails -->
+ 
         <div class="image-thumbnails">
             <?php foreach ($images as $img): ?>
                 <img src="admin/<?= $img ?>" alt="Thumbnail" onclick="changeMainImage('admin/<?= $img ?>')">
@@ -68,7 +67,7 @@ $main_image = $images[0] ?? 'default.jpg'; // Set first image as default, fallba
         </div>
     </div>
 
-    <!-- Right: Product Info -->
+   
     <div class="product-info">
         <h1><?= htmlspecialchars($product['name']) ?></h1>
         <p class="price">₹<?= number_format($product['price'], 2) ?></p>

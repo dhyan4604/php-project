@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'nav.php';
+include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['add_to_cart'])) {
@@ -34,10 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['cart'][] = $cart_item;
         }
 
-        // Set a success message for the session
         $_SESSION['success_message'] = "Item added to cart successfully!";
 
-        // Redirect back to shop.php instead of cart.php
+    
         header("Location: shop.php");
         exit();
     }
@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $total_price += $item_total;
             ?>
             <tr>
-                <td><img src="admin/uploads/<?= $item['image']; ?>" class="cart-img"></td>
+                <td><img src="admin/<?= $item['image']; ?>" class="cart-img"></td>
                 <td><?= $item['name']; ?></td>
                 <td>₹<?= number_format($item['price'], 2); ?></td>
                 <td>

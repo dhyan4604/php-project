@@ -11,7 +11,7 @@
     <nav>
         <a href="index.php">Home</a>
         <a href="shop.php">Shop</a>
-        <a href="#">New Arrivals</a>
+        <a href="order.php">Orders</a>
         <a href="cart.php">Cart</a>
         <a href="#">About</a>
         <?php if (isset($_SESSION['user_id'])): ?>

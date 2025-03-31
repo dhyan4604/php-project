@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['name'] = $user['name'];
             $_SESSION['role'] = $user['role']; 
+            $_SESSION['email'] = $user['email'];
 
             // Redirect based on role
             if ($user['role'] === 'admin') {
@@ -41,18 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
 
-<div class="container">
+    <div class="container">
     <div class="form-container">
         <h2>Sign In</h2>
-        <div class="social-icons">
-            <button class="social-btn">f</button>
-            <button class="social-btn">G</button>
-            <button class="social-btn">in</button>
-           
-        </div>
+     
         <form action="login.php" method="POST">
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>

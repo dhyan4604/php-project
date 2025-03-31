@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
     
+    
     <style>
         .message-container {
             text-align: center;
@@ -43,13 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="container">
     <div class="form-container">
         <h2>Create Account</h2>
-        <div class="social-icons">
-            <button class="social-btn">f</button>
-            <button class="social-btn">G</button>
-            <button class="social-btn">in</button>
-            <button class="social-btn">P</button>
-        </div>
-
+        
         <?php if (isset($_GET['success'])): ?>
             <div class="message-container">
                 <p>Signup successful! <a href='login.php'>Login here</a></p>

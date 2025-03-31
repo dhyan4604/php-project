@@ -3,7 +3,7 @@ session_start();
 include 'db.php';
 include 'nav.php';
 
-// Fetch products
+
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 ?>
@@ -19,10 +19,9 @@ $result = $conn->query($sql);
 <body>
 
 
-<!-- Success Message Notification -->
 <?php if (isset($_SESSION['success_message'])): ?>
     <div class="cart-notification"><?= $_SESSION['success_message']; ?></div>
-    <?php unset($_SESSION['success_message']); // Clear message after displaying ?>
+    <?php unset($_SESSION['success_message']);  ?>
 <?php endif; ?>
 
 <section class="shop-header">

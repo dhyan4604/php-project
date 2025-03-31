@@ -1,0 +1,157 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Orders Container */
+.orders-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Orders Table */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.orders-table th, .orders-table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.orders-table th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.orders-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.orders-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* View Details Button */
+.view-details-btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.view-details-btn:hover {
+    background-color: #d43f00;
+    transform: scale(1.05);
+}
+
+/* Order Details Section */
+.order-details {
+    display: none;
+    background: #f8f8f8;
+}
+
+.order-details td {
+    padding: 20px;
+    text-align: left;
+}
+
+.order-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Order Items */
+.order-items {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.order-item {
+    width: 120px;
+    text-align: center;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.order-item:hover {
+    transform: translateY(-5px);
+}
+
+.order-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    max-width: 600px;
+    background: white;
+    padding: 25px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 12px;
+}
